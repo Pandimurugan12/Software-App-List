@@ -45,38 +45,52 @@ def sortbyauthoryear():
         print(list[ i ].name, list[ i ].author, list[ i ].version, list[ i ].year, list[ i ].price)
 
 list = []
-print("Enter Number of Inputs: ")
-noofApps = int(input())
-for i in range(noofApps):
-    print("Enter Software Name, Author Name, Version, Year, Price: ")
-    softwareName = input()
-    authorName = input()
-    version = input()
-    year = int(input())
-    price = int(input())
-    list.append(Software(softwareName, authorName, version, year, price))
-# list.append(Software('handwriter', 'pandi', 2.1, 2020, 20000))
-# list.append(Software('passcheck', 'murugan', 3, 2019, 30000))
-# list.append(Software('kadsfh', 'murugan', 3, 2020, 40000))
-# list.append(Software('colorgame', 'sam', 1.1, 2018, 10000))
+# print("Enter Number of Inputs: ")
+# noofApps = int(input())
+# for i in range(noofApps):
+#     print("Enter Software Name, Author Name, Version, Year, Price: ")
+#     softwareName = input()
+#     authorName = input()
+#     version = input()
+#     year = int(input())
+#     price = int(input())
+#     list.append(Software(softwareName, authorName, version, year, price))
+list.append(Software('handwriter', 'pandi', 2.1, 2020, 20000))
+list.append(Software('passcheck', 'murugan', 3, 2019, 30000))
+list.append(Software('kadsfh', 'murugan', 3, 2020, 40000))
+list.append(Software('colorgame', 'sam', 1.1, 2018, 10000))
+
 print("\n1.Display by author\n2.Sort by price\n3.Display details by given year\n4.Sort by author and publish year\n")
-print("Enter Your Choice: ")
-choice = int(input()) 
-if (choice == 1):
-    print("Enter Author Name")
-    author = input()
-    displaybyname(author)
+condition = True
+while (condition):
+    print("Enter Your Choice: ")
+    choice = int(input())
+    if (choice == 1):
+        print("Enter Author Name")
+        author = input()
+        displaybyname(author)
 
-elif (choice == 2):
-    sortbyprice()
+    elif (choice == 2):
+        sortbyprice()
 
-elif (choice == 3):
-    print("Enter Year")
-    year = int(input())
-    displaybyyear(year)
+    elif (choice == 3):
+        print("Enter Year")
+        year = int(input())
+        displaybyyear(year)
 
-elif (choice == 4):
-    sortbyauthoryear()
+    elif (choice == 4):
+        sortbyauthoryear()
 
-else:
-    print("Enter a Valid Choice")
+    else:
+        print("Enter a Valid Choice")
+
+    print("Do you want to continue(0/1): ")
+    yorn = int(input())
+    if(yorn == 0):
+        condition = True
+    else:
+        condition = False
+
+
+
+
