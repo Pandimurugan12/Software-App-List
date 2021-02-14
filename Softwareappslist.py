@@ -48,6 +48,7 @@ list = []
 print("Enter Number of Inputs: ")
 noofApps = int(input())
 for i in range(noofApps):
+    print("Enter Software Name, Author Name, Version, Year, Price: ")
     softwareName = input()
     authorName = input()
     version = input()
