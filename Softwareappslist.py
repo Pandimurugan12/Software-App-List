@@ -45,8 +45,7 @@ def sortbyauthoryear():
         print(list[ i ].name, list[ i ].author, list[ i ].version, list[ i ].year, list[ i ].price)
 
 list = []
-print("Enter Number of Inputs: ")
-noofApps = int(input())
+noofApps = int(input("Enter Number of Inputs: "))
 for i in range(noofApps):
     print("Enter Software Name, Author Name, Version, Year, Price: ")                                              #getting user input
     softwareName = input()
@@ -59,19 +58,16 @@ for i in range(noofApps):
 print("\n1.Display by author\n2.Sort by price\n3.Display details by given year\n4.Sort by author and publish year\n")
 condition = True
 while (condition):
-    print("Enter Your Choice: ")
-    choice = int(input())
+    choice = int(input("Enter Your Choice: "))
     if (choice == 1):
-        print("Enter Author Name")
-        author = input()
+        author = input("Enter Author Name")
         displaybyname(author)           
 
     elif (choice == 2):
         sortbyprice()
 
     elif (choice == 3):
-        print("Enter Year")
-        year = int(input())
+        year = int(input("Enter Year"))
         displaybyyear(year)
 
     elif (choice == 4):
